@@ -272,7 +272,7 @@ footer {
 }
 
 .service-box h3 {
-  color: green;
+  color: black;
 }
 
 .service-box:hover {
@@ -294,3 +294,4 @@ nav img.logo-small {
   top: 20px;
   right: 40px;
 }
+
