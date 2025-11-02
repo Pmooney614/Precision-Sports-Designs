@@ -43,18 +43,18 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #00796b; /* teal hover */
+  background-color:green; /* teal hover */
   color: #fff;
 }
 
 /* ✅ ACTIVE PAGE HIGHLIGHT */
 nav a.active {
-  background-color: #4CAF50; /* green background */
+  background-color: green; /* green background */
   color: #fff;
 }
 
 nav a.active:hover {
-  background-color: #45a049; /* darker green on hover */
+  background-color: green; /* darker green on hover */
 }
 
 /* NAVBAR CONTACT BUTTON */
@@ -272,7 +272,7 @@ footer {
 }
 
 .service-box h3 {
-  color: #004d40;
+  color: green;
 }
 
 .service-box:hover {
@@ -286,4 +286,11 @@ nav img.logo-small {
   height: auto;
   margin-left: 10px;
   vertical-align: middle;
+}
+.logo-small {
+  width: 120px; /* double size */
+  height: auto;
+  position: absolute;
+  top: 20px;
+  right: 40px;
 }
