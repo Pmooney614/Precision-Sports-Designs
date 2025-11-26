@@ -415,11 +415,41 @@ body.phone section {
     display: block;
   }
 }
+/* ===============================
+   PHONE - Force Desktop Layout
+   =============================== */
 
+body.phone {
+  min-width: 1200px;
+  overflow-x: auto;
+}
 
+body.phone header,
+body.phone nav,
+body.phone .hero,
+body.phone .services-container {
+  min-width: 1200px;
+}
 
+body.phone nav {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
 
+body.phone nav a {
+  white-space: nowrap;
+}
 
+body.phone .services-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto;
+}
 
-
-
+body.phone .service-box {
+  min-width: 320px;
+}
