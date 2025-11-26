@@ -282,8 +282,8 @@ footer {
 
 /* SMALL LOGO IN NAV */
 nav img.logo-small {
-  width: 250px;
-  height: 150px;
+  width: 500px;
+  height: 300px;
   margin-top: -30px;
   margin-left: 10px;
   vertical-align: middle;
@@ -293,11 +293,11 @@ header {
 }
 .logo-small {
   width: auto;
-  height: 90px;      /* 30px taller */
+  height: 90px;
   position: absolute;
-  top: 45px;          /* same vertical position */
-  right: 10px;        /* 50px more to the left */
-  z-index: 0;         /* stay on bottom layer */
+  top: 45px;         
+  right: 10px;       
+  z-index: 0;        
 }
 /* ===== DEVICE MODE STYLES ===== */
 
@@ -417,3 +417,4 @@ body.phone section {
     display: block;
   }
 }
+
