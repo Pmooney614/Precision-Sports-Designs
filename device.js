@@ -1,3 +1,4 @@
+alert("Device.js loaded");
 function detectDevice() {
   let w = window.innerWidth;
   let body = document.body;
@@ -17,3 +18,4 @@ function detectDevice() {
 
 window.addEventListener("load", detectDevice);
 window.addEventListener("resize", detectDevice);
+
