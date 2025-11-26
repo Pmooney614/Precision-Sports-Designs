@@ -284,7 +284,7 @@ nav img.logo-small {
   width: 250px;
   height: 125px;
   margin-top: -30px;
-  margin-left: 10px;
+  margin-right: 950px;
   vertical-align: middle;
 }
 header {
@@ -476,3 +476,4 @@ body.phone .team {
 body.phone .service-box {
   min-width: 250px; /* Keep them from shrinking too much */
 }
+
