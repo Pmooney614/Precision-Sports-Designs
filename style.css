@@ -1,3 +1,4 @@
+/* ===== RESET & BASE ===== */
 * {
   margin: 0;
   padding: 0;
@@ -291,11 +292,11 @@ header {
 }
 .logo-small {
   width: auto;
-  height: 90px;
+  height: 90px;      /* 30px taller */
   position: absolute;
-  top: 45px;         
-  right: 10px;       
-  z-index: 0;        
+  top: 45px;          /* same vertical position */
+  right: 10px;        /* 50px more to the left */
+  z-index: 0;         /* stay on bottom layer */
 }
 /* ===== DEVICE MODE STYLES ===== */
 
@@ -452,4 +453,26 @@ body.phone .services-container {
 
 body.phone .service-box {
   min-width: 320px;
+}
+/* ===============================
+   PHONE - Shrink Desktop Layout
+   =============================== */
+body.phone {
+  transform: scale(0.7); /* Shrinks everything to 70% */
+  transform-origin: top left; /* Keeps it aligned top-left */
+  width: 142.85%; /* Counteracts the scale so it fills screen width */
+}
+
+body.phone header,
+body.phone nav,
+body.phone .hero,
+body.phone .services-container,
+body.phone section,
+body.phone .image-grid,
+body.phone .team {
+  width: 100%; /* Let inner elements adapt */
+}
+
+body.phone .service-box {
+  min-width: 250px; /* Keep them from shrinking too much */
 }
