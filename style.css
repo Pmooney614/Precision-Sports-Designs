@@ -281,8 +281,8 @@ footer {
 
 /* SMALL LOGO IN NAV */
 nav img.logo-small {
-  width: 250px;
-  height: 150px;
+  width: 125px;
+  height: 75px;
   margin-top: -30px;
   margin-left: 10px;
   vertical-align: middle;
@@ -416,6 +416,7 @@ body.phone section {
     display: block;
   }
 }
+
 
 
 
