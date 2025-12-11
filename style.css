@@ -284,7 +284,7 @@ nav img.logo-small {
   width: 250px;
   height: 125px;
   margin-top: -30px;
-  margin-right: 1600px;
+  margin-right: 1300px;
   vertical-align: middle;
 }
 header {
@@ -298,3 +298,4 @@ header {
   right: 10px;        /* 50px more to the left */
   z-index: 0;         /* stay on bottom layer */
 }
+
