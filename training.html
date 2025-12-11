@@ -2,43 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <script>const scale = Math.min(Math.max(scaleX, 0.5), 1);</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Precision Sports Designs - Training Services</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/jpeg" href="Logo.jpg" sizes="16x16">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script>
-(function() {
-  const BASE_WIDTH = 1317;  // desktop base width
-  const BASE_HEIGHT = 914;  // desktop base height
-
-  // get actual viewport size
-  const viewportWidth = window.innerWidth;
-  const viewportHeight = window.innerHeight;
-
-  // detect device type
-  let device;
-  if (viewportWidth <= 768) device = "Phone";
-  else if (viewportWidth <= 1024) device = "Tablet";
-  else device = "Desktop";
-
-  // calculate scale for width & height
-  const scaleX = viewportWidth / BASE_WIDTH;
-  const scaleY = viewportHeight / BASE_HEIGHT;
-  const scale = Math.min(scaleX, scaleY); // preserve aspect ratio
-
-  // apply scaling before the page fully loads
-  document.documentElement.style.transform = `scale(${scale})`;
-  document.documentElement.style.transformOrigin = "top left";
-  document.documentElement.style.width = `${BASE_WIDTH}px`;
-  document.documentElement.style.height = `${BASE_HEIGHT}px`;
-
-  console.log(`Device: ${device}`);
-  console.log(`Viewport: ${viewportWidth}x${viewportHeight}`);
-  console.log(`Scale applied: ${scale}`);
-})();
-</script>
+  <script src="device.js"></script>
 </head>
 <body>
   <header>
@@ -72,10 +41,5 @@
   <footer>
     &copy; 2025 Precision Sports Designs | All Rights Reserved
   </footer>
-  <script src="all.js"></script>
 </body>
 </html>
-
-
-
-
