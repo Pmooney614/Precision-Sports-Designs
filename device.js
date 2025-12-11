@@ -22,7 +22,7 @@ const info = detectDeviceInfo();
 console.log("Device Type:", info.deviceType);
 console.log("Width:", info.width, "px");
 console.log("Height:", info.height, "px");
-//--This thing above this text is just for testing delete after!!!--\\
+
 function detectDevice() {
   let w = window.innerWidth;
   let body = document.body;
@@ -42,6 +42,3 @@ function detectDevice() {
 
 window.addEventListener("load", detectDevice);
 window.addEventListener("resize", detectDevice);
-
-
-
