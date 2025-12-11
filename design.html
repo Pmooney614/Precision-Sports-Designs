@@ -8,7 +8,39 @@
   <link rel="icon" type="image/jpeg" href="Logo.jpg" sizes="16x16">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="CSS/sprinkler.css">
-  <script src="device.js"></script>
+  <script>
+  (function() {
+    // 1️⃣ Base desktop dimensions
+    const baseDesktop = { width: 1317, height: 914 };
+
+    // 2️⃣ Detect device type & viewport
+    const ua = navigator.userAgent.toLowerCase();
+    let deviceType;
+    if (/iphone|android|mobile/.test(ua)) deviceType = "phone";
+    else if (/ipad|tablet/.test(ua)) deviceType = "ipad";
+    else deviceType = "desktop";
+
+    const deviceWidth = window.innerWidth;
+    const deviceHeight = window.innerHeight;
+
+    // 3️⃣ Compute scale factors
+    const scaleX = deviceWidth / baseDesktop.width;
+    const scaleY = deviceHeight / baseDesktop.height;
+    const scale = Math.min(scaleX, scaleY); // uniform scale to fit screen
+
+    // 4️⃣ Apply scale BEFORE page renders
+    document.documentElement.style.transformOrigin = "top left";
+    document.documentElement.style.transform = `scale(${scale})`;
+
+    // Optional: store info globally
+    window.deviceInfo = { deviceType, deviceWidth, deviceHeight, scale };
+
+    console.log("Device Type:", deviceType);
+    console.log("Viewport Width:", deviceWidth + "px");
+    console.log("Viewport Height:", deviceHeight + "px");
+    console.log("Scale applied:", scale);
+  })();
+</script>
 </head>
 <body>
   <header>
@@ -45,4 +77,5 @@
   <script src="all.js"></script>
 </body>
 </html>
+
 
