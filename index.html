@@ -8,37 +8,35 @@
   <link rel="icon" type="image/jpeg" href="Logo.jpg" sizes="16x16">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script>
-  (function() {
-    // 1️⃣ Base desktop dimensions
-    const baseDesktop = { width: 1317, height: 914 };
+(function() {
+  const BASE_WIDTH = 1317;  // desktop base width
+  const BASE_HEIGHT = 914;  // desktop base height
 
-    // 2️⃣ Detect device type & viewport
-    const ua = navigator.userAgent.toLowerCase();
-    let deviceType;
-    if (/iphone|android|mobile/.test(ua)) deviceType = "phone";
-    else if (/ipad|tablet/.test(ua)) deviceType = "ipad";
-    else deviceType = "desktop";
+  // get actual viewport size
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
 
-    const deviceWidth = window.innerWidth;
-    const deviceHeight = window.innerHeight;
+  // detect device type
+  let device;
+  if (viewportWidth <= 768) device = "Phone";
+  else if (viewportWidth <= 1024) device = "Tablet";
+  else device = "Desktop";
 
-    // 3️⃣ Compute scale factors
-    const scaleX = deviceWidth / baseDesktop.width;
-    const scaleY = deviceHeight / baseDesktop.height;
-    const scale = Math.min(scaleX, scaleY); // uniform scale to fit screen
+  // calculate scale for width & height
+  const scaleX = viewportWidth / BASE_WIDTH;
+  const scaleY = viewportHeight / BASE_HEIGHT;
+  const scale = Math.min(scaleX, scaleY); // preserve aspect ratio
 
-    // 4️⃣ Apply scale BEFORE page renders
-    document.documentElement.style.transformOrigin = "top left";
-    document.documentElement.style.transform = `scale(${scale})`;
+  // apply scaling before the page fully loads
+  document.documentElement.style.transform = `scale(${scale})`;
+  document.documentElement.style.transformOrigin = "top left";
+  document.documentElement.style.width = `${BASE_WIDTH}px`;
+  document.documentElement.style.height = `${BASE_HEIGHT}px`;
 
-    // Optional: store info globally
-    window.deviceInfo = { deviceType, deviceWidth, deviceHeight, scale };
-
-    console.log("Device Type:", deviceType);
-    console.log("Viewport Width:", deviceWidth + "px");
-    console.log("Viewport Height:", deviceHeight + "px");
-    console.log("Scale applied:", scale);
-  })();
+  console.log(`Device: ${device}`);
+  console.log(`Viewport: ${viewportWidth}x${viewportHeight}`);
+  console.log(`Scale applied: ${scale}`);
+})();
 </script>
 </head>
 <body>
@@ -72,5 +70,6 @@
   <script src="all.js"></script>
 </body>
 </html>
+
 
 
