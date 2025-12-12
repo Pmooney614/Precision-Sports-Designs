@@ -281,8 +281,8 @@ footer {
 }
 
 nav img.logo-small {
-  width: 250px;
-  height: 125px;
+  width: 200px;
+  height: 100px;
   margin-top: -30px;
   margin-right: 1300px;
   vertical-align: middle;
@@ -298,4 +298,5 @@ header {
   right: 10px;        /* 50px more to the left */
   z-index: 0;         /* stay on bottom layer */
 }
+
 
